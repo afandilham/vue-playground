@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gacha pet</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/vue@next" defer></script>
+  <script src="app.js" defer></script>
+</head>
+
+<body class="bg-gray-800">
+  <div id="app">
+    <div class="mx-auto max-w-md bg-purple-900 p-4 my-10 rounded-md shadow-md">
+      <div class="flex justify-center rounded-md pt-2">
+        <div class="relative text-gray-200 rounded-md font-semibold text-3xl py-4"><span class="text-6xl">G</span>acha
+          pet |🐾</div>
+        <span class="inline-flex rounded-full h-5 w-5 bg-purple-500 transition animate-ping"></span>
+      </div>
+      <form class="mt-4">
+        <div class="flex flex-col text-gray-200">
+          <label for="Qty" class="font-semibold">Qty</label>
+          <input type="number" min="0" max="10" placeholder="(min = 1, max = 10)" id="Qty" name="Qty" v-model="counterWish"
+            class="my-2 px-3 py-3 placeholder-gray-400 text-gray-700 relative bg-white bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full" />
+        </div>
+        <button
+          class="w-full bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          type="button" @click="makeAWish(counterWish); isClick = true;" required>
+          {{ counterWish }}x Wish
+        </button>
+      </form>
+    </div>
+
+    <div v-if="isClick" class="mx-auto max-w-3xl bg-indigo-700 text-gray-200 rounded-sm grid grid-cols-5 gap-3 p-3 text-center">
+      <div :class="[randomNumberColor()]" class="border-2 px-2 py-1 rounded-sm" v-for="pet in dataWish[0]">{{ pet }}</div>
+    </div>
+
+    <div class="mx-auto max-w-md text-gray-200 text-center font-semibold bg-purple-800 my-8 rounded-sm shadow-xl p-3">
+      <div class="border p-2 mb-2">
+        Total Wish : {{ totalWish }}
+      </div>
+      <button
+        class="w-full text-pink-500 bg-transparent border border-solid border-pink-500 hover:bg-pink-500 hover:text-white active:bg-pink-600 font-semibold uppercase text-sm px-6 py-3 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+        type="button" @click="resetWish">
+        reset
+      </button>
+    </div>
+  </div>
+</body>
+
+</html>
