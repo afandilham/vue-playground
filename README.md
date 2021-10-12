@@ -1,2 +1,2 @@
 # vue-playground
-My vue small project examples
+My vue small project example collections
