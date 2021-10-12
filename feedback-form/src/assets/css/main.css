@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card {
+  @apply bg-contain bg-no-repeat bg-center mb-6 bg-gray-100 min-h-0 max-h-full shadow-lg;
+}
