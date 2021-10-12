@@ -43,8 +43,7 @@ export default {
   },
   methods: {
     loadData() {
-      const dbUrl = import.meta.env.VITE_DATABASE_URL;
-      fetch(dbUrl)
+      fetch(import.meta.env.VITE_DATABASE_URL)
       .then((res) => {
         if (res.ok) {
           console.log(res);
