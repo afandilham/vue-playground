@@ -48,7 +48,7 @@ export default {
   },
   methods: {
     submitFeedback() {
-      fetch('https://feedback-form-899bb-default-rtdb.asia-southeast1.firebasedatabase.app/feedback.json', {
+      fetch(import.meta.env.VITE_DATABASE_URL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
