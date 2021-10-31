@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::selection {
+  @apply bg-yellow-400;
+}
+
+.portofolio-title {
+  color: #6c778a38;
+}
+
+.divider-content::before {
+  @apply absolute flex justify-center text-5xl font-light w-3 text-yellow-300;
+  content: '|';
+}
+
+.divider-content::after {
+  @apply absolute flex justify-center text-2xl font-light w-3 text-gray-200 ml-4;
+  content: '|';
+}
+
+.article > p > a {
+  @apply text-yellow-300 underline hover:no-underline;
+}
+
+.article > p {
+  @apply my-4;
+}

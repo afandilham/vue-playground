@@ -43,8 +43,12 @@ export default {
   },
   methods: {
     loadData() {
+<<<<<<< HEAD
       const dbUrl = import.meta.env.VITE_DATABASE_URL;
       fetch(dbUrl)
+=======
+      fetch(import.meta.env.VITE_DATABASE_URL)
+>>>>>>> parent of 5169bc2 (Delete feedback-form directory)
       .then((res) => {
         if (res.ok) {
           console.log(res);
