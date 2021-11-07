@@ -6,7 +6,7 @@ import RevealAbout from "./pages/RevealAbout.vue";
 import HomeFooter from './pages/HomeFooter.vue';
 import CopyrightFooter from './pages/CopyrightFooter.vue';
 import ArticleView from './components/articles/ArticleView.vue';
-import ProjectDetail from './components/projects/ProjectDetail.vue';
+// import ProjectDetail from './components/projects/ProjectDetail.vue';
 import NotFound from "./pages/NotFound.vue";
 
 const routes = [
@@ -50,5 +50,11 @@ const router = createRouter({
   routes,
   linkActiveClass: 'underline'
 });
+
+// router.afterEach((to, from) => {
+//   const prevHistory = to.path.split('/').length;
+//   const afterhistory = from.path.split('/').length;
+//   to.meta.transition = prevHistory < afterhistory ? 'slide-up' : 'slide-down';
+// });
 
 export default router;

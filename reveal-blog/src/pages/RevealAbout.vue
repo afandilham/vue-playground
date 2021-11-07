@@ -1,8 +1,8 @@
 <template>
-  <div class="mt-4">
+  <main class="mt-4">
     <timeline-header></timeline-header>
     <timeline-item></timeline-item>
-  </div>
+  </main>
 </template>
 
 <script>

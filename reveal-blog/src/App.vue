@@ -1,11 +1,14 @@
 <template>
   <div class="mx-auto container max-w-2xl ">
     <app-navigation></app-navigation>
-    <main>
-      <router-view></router-view>
-    </main>
+    <router-view v-slot="{ Component }">
+      <transition name="fade">
+        <component :is="Component"></component>
+      </transition>
+    </router-view>
     <footer>
-      <router-view name="footer"></router-view>
+      <router-view name="footer">
+      </router-view>
     </footer>
   </div>
 </template>
@@ -68,3 +71,17 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.fade-enter-from {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  transition: all .3s ease-in;
+}
+
+.fade-enter-to {
+  opacity: 1;
+}
+</style>
