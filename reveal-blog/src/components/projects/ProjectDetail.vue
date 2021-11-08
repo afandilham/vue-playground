@@ -1,19 +1,16 @@
 <template>
   <teleport to="#app">
-    <main>
-      <div class="fixed top-0 left-0 h-full w-full shadow-lg bg-gray-800 dark:bg-gray-700 opacity-70 overflow-hidden"></div>
+    <div class="fixed top-0 left-0 h-full w-full shadow-lg bg-gray-800 dark:bg-gray-700 opacity-70 overflow-hidden"></div>
+    <transition-group tag="main" mode="out-in" name="scale" appear>
       <dialog
         open
         class="
           mx-auto
-          max-w-8xl
-          px-20
           top-6
           left-0
           bottom-0
           shadow-md
           z-10
-          h-3/4
           overflow-y-auto
           bg-gray-700
           rounded-md
@@ -34,13 +31,12 @@
             ></path>
           </svg>
         </button>
-        <h1 class="text-yellow-300 text-center font-semibold text-4xl font-poppins p-3 mx-auto">
+        <h1 class="text-yellow-300 text-center font-semibold text-xl xl:text-4xl lg:text-4xl md:text-4xl sm:text-sm font-poppins p-3 mx-auto">
           {{ project.name }}
         </h1>
-        <img :src="project.img" :alt="project.name" class="object-contain h-3/4 w-3/4 mx-auto pt-4 rounded-md">
-        <p class="text-gray-200 max-w-2xl mx-auto text-justify">{{ project.desc }}</p>
+        <img :src="project.img" :alt="project.name" class="object-contain h-3/4 w-full pt-4 rounded-md">
       </dialog>
-    </main>
+    </transition-group>
   </teleport>
 </template>
 
@@ -50,3 +46,26 @@ export default {
   emits: ['close']
 };
 </script>
+
+<style scoped>
+.scale-enter-from {
+  transform: scale(.9);
+}
+
+.scale-enter-active {
+  transition: all .3s ease-in;
+}
+
+.scale-enter-to,
+.scale-leave-from {
+  transform: scale(1);
+}
+
+.scale-leave-active {
+  transition: all .3s ease-out;
+}
+
+.scale-leave-to {
+  transform: scale(.3);
+}
+</style>

@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="mx-4 xl:mx-0 lg:mx-0 md:mx-0 sm:mx-4">
     <div class="text-gray-200" v-for="article in getArticle()" :key="article.title">
       <h1 class="text-4xl font-poppins font-semibold mt-12 mb-1">{{ article.title }}</h1>
       <span class="text-xs font-mono">{{ article.dateString }}</span>

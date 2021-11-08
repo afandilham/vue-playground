@@ -1,5 +1,5 @@
 <template>
-  <main class="mt-4">
+  <main class="w-full mt-4 mx-4 xl:mx-0 lg:mx-0 md:mx-0 sm:mx-4">
     <timeline-header></timeline-header>
     <timeline-item></timeline-item>
   </main>

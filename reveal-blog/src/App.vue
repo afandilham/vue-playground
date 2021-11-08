@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto container max-w-2xl ">
+  <div id="content" class="mx-auto container max-w-2xl ">
     <app-navigation></app-navigation>
     <router-view v-slot="{ Component }">
       <transition name="fade">
@@ -52,13 +52,11 @@ export default {
           id: nanoid(),
           name: 'Work List App',
           img: '/img/Work-List-Screenshoot.png',
-          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Illi enim inter se dissentiunt. Dici enim nihil potest verius. Nemo igitur esse beatus potest. Duo Reges: constructio interrete.'
         },
         {
           id: nanoid(),
           name: 'Corona Virus Tracker',
           img: '/img/Corona-Virus.png',
-          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Illi enim inter se dissentiunt. Dici enim nihil potest verius. Nemo igitur esse beatus potest. Duo Reges: constructio interrete.'
         }
       ]
     };

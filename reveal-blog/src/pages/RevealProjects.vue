@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="flex flex-col justify-center items-center">
     <app-header
       first-title="My"
       second-title="Portofolio"
@@ -7,7 +7,7 @@
     >
     </app-header>
     <div class="divider-content flex justify-center my-8"></div>
-    <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <section class="mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
       <base-card class="rounded-sm py-8 shadow-md" v-for="project in dataProjects" :key="project.id">
         <template #default>
           <project-item

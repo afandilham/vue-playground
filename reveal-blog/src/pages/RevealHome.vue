@@ -1,5 +1,5 @@
 <template>
-  <main class="mt-20 min-h-screen">
+  <main class="mt-20 min-h-screen mx-4 md:mx-0 sm:mx-4">
     <div class="profile flex text-gray-200 items-center">
       <img src="/img/profile.gif" alt="profile" class="rounded-full border-2 border-yellow-300 p-2 w-20 h-20">
       <div class="flex flex-col ml-4">
