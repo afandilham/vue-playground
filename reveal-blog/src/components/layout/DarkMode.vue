@@ -1,5 +1,5 @@
 <template>
-  <button>
+  <button @click="$emit('toggleDarkMode')">
     <svg
       class="w-8 h-8"
       fill="currentColor"
@@ -14,3 +14,9 @@
     </svg>
   </button>
 </template>
+
+<script>
+export default {
+  emits: ['toggleDarkMode']
+}
+</script>

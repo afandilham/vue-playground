@@ -1,5 +1,5 @@
 <template>
-  <h3 class="text-xl text-gray-200 text-center">{{ name }}</h3>
+  <h3 class="text-xl text-gray-800 dark:text-gray-200 text-center">{{ name }}</h3>
   <img :src="img" alt="Work List App" class="h-full w-full">
   <button @click="getProjectDetail(name)" class="text-gray-200 bg-gray-700 hover:bg-gray-600 rounded-sm w-full py-2 font-poppins font-medium transition-all ease-in">
     Details
